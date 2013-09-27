@@ -1,0 +1,12 @@
+#!/bin/bash
+
+
+echo "Donner l'interface";  
+read inter 
+echo "donner adress IP";
+read ip
+echo "donner le mask ";
+read mask
+ifconfig $inter $ip/$mask up
+
+

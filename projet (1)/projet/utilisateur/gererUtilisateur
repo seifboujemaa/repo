@@ -1,0 +1,24 @@
+#!/bin/bash
+clear
+choix=0
+echo "...........................GESTION UTILISATEUR.................................."
+while [ $choix -ne 1 -a $choix -ne 2 -a $choix -ne 3 -a $choix -ne 4 -a $choix -ne 5 ]
+do
+echo "                    1- Pour creer un utilisateur tapez 1"
+echo "		    2- Pour supprimer un utilisateur  tapez 2"
+echo "		    3- Pour lister un utilisateur tapez 3"
+echo "		    4- Pour gérer les mots de passe tapez 4"
+echo "		    5- RETOUR tapez 5"
+
+echo "Donnez votre choix : "
+echo -n
+read choix
+done
+case $choix in
+1) ./utilisateur/creer/creation;;
+2) ./utilisateur/supp/supprimer;;
+3) ./utilisateur/list/lister;;
+4) ./utilisateur/gerer/gerer;;
+5) ./menu;;
+*) echo "valeur incorrecte" ;;
+esac

@@ -1,0 +1,26 @@
+#!/bin/bash
+clear
+choix=0
+echo "...........................LISTER UTILISATEUR.................................."
+while [ $choix -ne 1 -a $choix -ne 2 -a $choix -ne 3 -a $choix -ne 4 -a $choix -ne 5 -a $choix -ne 6 ]
+do
+echo "                    1- Pour fournir des information sur ces utilisateur 1"
+echo "		    2- Pour lister des session ouvertes  tapez 2"
+echo "		    3- Pour lister des utilisateurs système 3"
+echo "		    4- Pour lister des utilisateurs simple 4"
+echo "		    5- Quitter 5"
+echo "		    6- RETOUR tapez 6"
+
+echo "Donnez votre choix : "
+echo -n
+read choix
+done
+case $choix in
+1) ./utilisateur/list/infot;;
+2) ./utilisateur/list/sess;;
+3)  ./utilisateur/list/systeme;;
+4) ./utilisateur/list/fournir;;
+5) exit;;
+6) ./utilisateur/gererUtilisateur;;
+*) echo "valeur incorrecte" ;;
+esac

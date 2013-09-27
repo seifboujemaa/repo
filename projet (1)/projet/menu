@@ -1,0 +1,24 @@
+#!/bin/bash
+clear
+choix=0
+echo "...........................MENU.................................."
+while [ $choix -ne 1 -a $choix -ne 2 -a $choix -ne 3 -a $choix -ne 4 -a $choix -ne 5 ]
+do
+echo "                    1- Pour gérer les utilisateur tapez 1"
+echo "		    2- Pour gérer les taches planifiées tapez 2"
+echo "		    3- Pour gérer les logs systeme tapez 3"
+echo "		    4- Pour gérer les reseaux tapez 4"
+echo "		    5- Quitter"
+
+echo "Donnez votre choix : "
+echo -n
+read choix
+done
+case $choix in
+1) ./utilisateur/gererUtilisateur;;
+2)  ./tache/gererTache;;
+3)  ./logs/gererLogs;;
+4)  ./reseau/gererReseau;;
+5)  exit;;
+*) echo "valeur incorrecte" ;;
+esac

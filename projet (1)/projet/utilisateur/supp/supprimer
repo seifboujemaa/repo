@@ -1,0 +1,17 @@
+
+#!/bin/bash
+
+
+echo "donner le nom d'utilisateur a suprimer ";  
+read user 
+
+
+
+userdel -r "$user"
+if [ "$?" = 0 ]; then
+echo " Suppression effectuée avec succés "
+sleep 2
+else  echo "Echec"
+sleep 2
+fi
+

@@ -1,0 +1,24 @@
+#!/bin/bash
+clear
+choix=0
+echo "...........................Gerer mots de passe.................................."
+while [ $choix -ne 1 -a $choix -ne 2 -a $choix -ne 3 -a $choix -ne 4 -a $choix -ne 5 ]
+do
+echo "                    1- Bloquer un compte 1"
+echo "		    2- Debloquer un compte 2"
+echo "		    3- Protéger un compte 3"
+echo "		    4- Quitter 4"
+echo "		    5- RETOUR tapez 5"
+
+echo "Donnez votre choix : "
+echo -n
+read choix
+done
+case $choix in
+1) ./utilisateur/gerer/bloquer;;
+2) ./utilisateur/gerer/debloquer;;
+3)  ./utilisateur/gerer/proteger;;
+4) exit;;
+5) ./utilisateur/gererUtilisateur;;
+*) echo "valeur incorrecte" ;;
+esac
