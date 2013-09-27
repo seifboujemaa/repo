@@ -1,7 +1,0 @@
-#!/bin/bash
-
-
-echo "la list des reseaux est";  
- 
-ifconfig eth0
-
